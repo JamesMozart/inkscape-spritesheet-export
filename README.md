@@ -38,7 +38,7 @@ Layers that do not match this pattern are skipped.
 
 ## Installation
 
-1. Copy the `sprite_merger/` folder into your Inkscape extensions directory:
+1. Copy the `inkscape_spritesheet_export/` folder into your Inkscape extensions directory:
    - **Linux / macOS**: `~/.config/inkscape/extensions/`
    - **Windows**: `%APPDATA%\inkscape\extensions\`
 2. Restart Inkscape.
