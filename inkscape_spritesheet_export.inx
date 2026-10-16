@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Export Layers and Merge to Sprite Sheet</name>
+    <id>com.example.inkscape_spritesheet_export</id>
+
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Export"/>
+        </effects-menu>
+    </effect>
+
+    <label appearance="header">Layer Naming Rule</label>
+    <label>Each layer must be named {tag}-{index}, e.g. run-0, run-1, idle-0.</label>
+    <label>{tag} becomes a row, {index} becomes a column.</label>
+    <label>Layers that do not match this pattern are skipped.</label>
+    <separator/>
+
+    <param name="output_file" type="path" mode="file_new"
+           gui-text="Output PNG file:">spritesheet.png</param>
+
+    <param name="gap" type="int" min="0" max="100"
+           gui-text="Gap between frames (px):">0</param>
+
+    <param name="export_dpi" type="float" min="1" max="10000"
+           gui-text="Export DPI (96 = 1:1):">96</param>
+
+    <param name="jobs" type="int" min="0" max="64"
+           gui-text="Parallel jobs (0 = auto):">0</param>
+
+    <param name="inkscape_path" type="string"
+           gui-text="Path to inkscape executable (empty = use PATH):"></param>
+
+    <param name="keep_temp" type="bool"
+           gui-text="Keep temporary files:">false</param>
+
+    <script>
+        <command location="inx" interpreter="python">inkscape_spritesheet_export.py</command>
+    </script>
+</inkscape-extension>
