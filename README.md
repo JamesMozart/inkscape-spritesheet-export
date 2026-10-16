@@ -23,8 +23,7 @@ Each layer must be named `{tag}-{index}`, for example:
 - jump-0
 - jump-1
 
-- `{tag}`   — animation name, becomes a **row** in the sprite sheet.
-- `{index}` — frame number, becomes a **column**.
+`{tag}`   — animation name, becomes a **row** in the sprite sheet. `{index}` — frame number, becomes a **column**.
 
 Layers that do not match this pattern are skipped.
 
