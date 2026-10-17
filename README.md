@@ -17,11 +17,11 @@ Each layer must be named `{tag}-{index}`, for example:
 - idle-0
 - idle-1
 - idle-2
+- jump-0
+- jump-1
 - run-0
 - run-1
 - run-2
-- jump-0
-- jump-1
 
 `{tag}`   — animation name, becomes a **row** in the sprite sheet. `{index}` — frame number, becomes a **column**.
 
