@@ -168,13 +168,17 @@ class SpriteMergerExportMerge(inkex.EffectExtension):
 
             # 3. Parse {tag}-{index} and arrange into a grid
             grid = {}  # grid[tag][index] = path
+            tags = []
             for label, path in results:
                 m = NAME_PATTERN.match(label)
                 tag = m.group("tag")
                 index = int(m.group("index"))
                 grid.setdefault(tag, {})[index] = path
+                # maintain layer order, from top to bottom
+                if tag not in tags:
+                    tags.insert(0, tag)
 
-            tags = sorted(grid.keys())
+            # tags = sorted(grid.keys())
             max_cols = max(max(indices.keys()) for indices in grid.values()) + 1
 
             opened = {}
