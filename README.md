@@ -1,4 +1,4 @@
-# Sprite Sheet Merger for Inkscape
+# Inkscape Sprite Sheet Export
 
 An Inkscape extension that exports layers as PNG frames and merges them into a single sprite sheet.
 
