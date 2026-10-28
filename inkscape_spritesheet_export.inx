@@ -3,7 +3,7 @@
     <name>Export Layers and Merge to Sprite Sheet</name>
     <id>com.example.inkscape_spritesheet_export</id>
 
-    <effect>
+    <effect needs-live-preview="false">
         <object-type>all</object-type>
         <effects-menu>
             <submenu name="Export"/>
